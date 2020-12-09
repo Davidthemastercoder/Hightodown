@@ -1,0 +1,54 @@
+print X
+show_time X
+declare X
+input X
+end X
+show_input X
+system_call X
+sleep X
+msg_box
+random X
+show_os X
+openwebsite X
+show_line X
+restart X
+only_input X
+make_file X
+only_file X 
+list_files X
+write_tofile X
+py_launch X
+only_if_line_file X
+goto X
+del_file X
+get_cwd X
+make_dir X
+math_pi X
+math_powX
+math_sqrt X
+calc_multi X
+calc_minus X
+calc_plus X
+calc_divide X
+get_host_name X
+computer_voice X
+call_exe X
+# X
+// X 
+to_bin X
+to_hex X
+to_oct X
+hash_md5 X
+hash_sha256 X
+show_battery_percent X
+win_notify X
+make_screenshot X
+set_alias
+print_alias
+input_in_alias
+openwebsite_alias
+
+
+
+
+
