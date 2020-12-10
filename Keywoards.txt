@@ -43,10 +43,11 @@ hash_sha256 X
 show_battery_percent X
 win_notify X
 make_screenshot X
-set_alias
-print_alias
-input_in_alias
-openwebsite_alias
+set_alias X
+print_alias X
+input_in_alias X
+openwebsite_alias X
+notify_alias X
 
 
 

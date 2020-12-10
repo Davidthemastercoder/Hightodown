@@ -224,6 +224,10 @@ while allowed == True:
  if s[i] =="openwebsite_alias\n" or s[i]=="openwebsite_alias;\n":
    webbrowser.open(alias[0])
    i=i+1
+ if s[i] =="notify_alias\n" or s[i]=="notify_alias;\n":
+    notification.notify("Alias" ,alias[0])
+    i=i+1
+ 
  
    
    
