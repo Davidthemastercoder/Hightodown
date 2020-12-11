@@ -227,6 +227,17 @@ while allowed == True:
  if s[i] =="notify_alias\n" or s[i]=="notify_alias;\n":
     notification.notify("Alias" ,alias[0])
     i=i+1
+ if s[i] =="only_input_alias\n" or s[i] == "only_input_alias;\n":
+   only_alipu = input(">>>")
+   if only_alipu == alias[0]:
+     i=i+1
+   else:
+      print("invalid cant continue")
+      break
+ if s[i] =="computer_voice_alias\n" or s[i] == "computer_voice_alias;\n":
+   sayer = win32com.client.Dispatch("SAPI.SpVoice")
+   sayer.speak(alias[0])
+   i=i+1
  
  
    

@@ -48,6 +48,8 @@ print_alias X
 input_in_alias X
 openwebsite_alias X
 notify_alias X
+only_input_alias X
+computer_voice_alias X
 
 
 
