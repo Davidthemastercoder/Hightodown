@@ -238,6 +238,16 @@ while allowed == True:
    sayer = win32com.client.Dispatch("SAPI.SpVoice")
    sayer.speak(alias[0])
    i=i+1
+ if s[i] =="clear_alias\n" or s[i]=="clear_alias;\n":
+   alias[0] = ""
+   i = i +1
+ if s[i] == "only_alias_num\n" or s[i] =="only_alias_num;\n":
+   if alias[0].strip("\n").isnumeric():
+     i=i+1
+   else:
+     break
+ 
+  
  
  
    
