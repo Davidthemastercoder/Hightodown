@@ -246,6 +246,9 @@ while allowed == True:
      i=i+1
    else:
      break
+ if s[i] == "sleep_alias\n" or s[i] == "sleep_alias;\n":
+   time.sleep(int(alias[0]))
+   i=i+1
  
   
  
