@@ -64,7 +64,7 @@ while allowed == True:
     print (variables)
     i = i + 3
  if s[i] == "print\n" or s[i]=="print;\n":
-     print (s[i+1])
+     print (s[i+1].strip("\n"))
      i=i+2
  if s[i]=="input\n" or s[i]=="input;\n":
    input(">>>")
@@ -99,7 +99,7 @@ while allowed == True:
  if s[i]=="show_line\n" or s[i]=="show_line;\n":
    print("current line:"+str(i))
    i=i+1
- if s[i]=="restart\n" or s[i]=="restart;\n":
+ if s[i]=="restart\n" or s[i]=="restart;\n" or s[i]=="restart" or s[i]=="restart;":
    i=0
  if s[i]=="only_input\n" or s[i]=="only_input;\n":
    f=input(">>>")
@@ -255,7 +255,30 @@ while allowed == True:
    else:
      print("invalid  cant continue")
      break
+ if s[i] =="random_in_alias\n" or s[i] == "random_in_alias;\n":
+   alias[0] = random.randint(int(s[i+1]),int(s[i+2]))
+   i=i+3
+
+
+   
+ if s[i] =="only_alias_else_jump\n" or s[i] =="only_alias_else_jump;\n":
+  if s[i+1].strip("\n") == alias[0]:
+     i=i+3
+  else:
+     i=int(s[i+2].strip("\n"))
+     else_state=True
+ if s[i] =="only_alias_endswith\n" or s[i] == "only_alias_endswith;\n":
+   if alias[0].endswith(s[i+1].strip("\n")):
+     print("valid")
+     i=i+2
+   else:
+     print("invalid cant continue")
+     break
+  
+
  
+     
+
   
  
  

@@ -54,6 +54,8 @@ clear_alias X
 only_alias_num X
 sleep_alias X
 only_alias X
-
+random_in_alias X
+only_alias_else_jump X
+only_alias_endswith X
 
 
