@@ -53,7 +53,7 @@ computer_voice_alias X
 clear_alias X
 only_alias_num X
 sleep_alias X
-
+only_alias X
 
 
 

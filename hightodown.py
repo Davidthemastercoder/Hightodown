@@ -249,6 +249,12 @@ while allowed == True:
  if s[i] == "sleep_alias\n" or s[i] == "sleep_alias;\n":
    time.sleep(int(alias[0]))
    i=i+1
+ if s[i] =="only_alias\n" or s[i] == "only_alias;\n":
+   if alias[0] == s[i+1].strip("\n"):
+     i=i+2
+   else:
+     print("invalid  cant continue")
+     break
  
   
  
