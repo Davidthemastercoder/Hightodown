@@ -274,7 +274,12 @@ while allowed == True:
    else:
      print("invalid cant continue")
      break
-  
+ if s[i]=="hash_md5_alias\n" or s[i]=="hash_md5_alias;\n":
+   string2 = alias[0].strip("\n")
+   string_hash2 = hashlib.md5(string2.encode())
+   print(string_hash2.hexdigest())
+   i=i+1
+   
 
  
      

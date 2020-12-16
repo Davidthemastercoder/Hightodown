@@ -57,5 +57,6 @@ only_alias X
 random_in_alias X
 only_alias_else_jump X
 only_alias_endswith X
+hash_md5_alias X
 
 
