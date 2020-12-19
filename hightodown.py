@@ -279,6 +279,12 @@ while allowed == True:
    string_hash2 = hashlib.md5(string2.encode())
    print(string_hash2.hexdigest())
    i=i+1
+ if s[i] =="hash_sha256_alias\n" or s[i]=="hash_sha256_alias;\n":
+   hashingstring = alias[0].strip("\n")
+   string_hash3 = hashlib.sha256(hashingstring.encode())
+   print(string_hash3.hexdigest())
+   i=i+1
+ 
    
 
  
