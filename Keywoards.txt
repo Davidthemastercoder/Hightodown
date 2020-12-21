@@ -59,3 +59,7 @@ only_alias_else_jump X
 only_alias_endswith X
 hash_md5_alias X
 hash_sha256_alias X
+set_counter X
+increase_counter X
+decrease_counter X
+only_counter_is X

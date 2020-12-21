@@ -51,6 +51,7 @@ often = 0
 allowed = True
 i=0
 variables = {}
+counter = 0
 data = open("Test.htd","r")
 s  = data.readlines()
 import webbrowser
@@ -284,7 +285,21 @@ while allowed == True:
    string_hash3 = hashlib.sha256(hashingstring.encode())
    print(string_hash3.hexdigest())
    i=i+1
- 
+ if s[i]=="set_counter\n" or s[i]=="set_counter;\n":
+   counter = int(s[i+1])
+   i=i+2
+ if s[i] =="increase_counter\n" or s[i]=="increase_counter;\n":
+   counter = counter + int(s[i+1])
+   i=i+2
+ if s[i] =="decrease_counter\n" or s[i]=="decrease_counter;\n":
+   counter = counter - int(s[i+1])
+   i=i+2
+ if s[i]=="only_counter_is\n" or s[i]=="only_counter_is;\n":
+   if counter == int(s[i+1]):
+     i=i+2
+   else:
+     print("Invalid cant continue")
+     break
    
 
  
