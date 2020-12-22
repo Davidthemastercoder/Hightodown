@@ -63,3 +63,5 @@ set_counter X
 increase_counter X
 decrease_counter X
 only_counter_is X
+only_counter_lower X
+only_counter_higher X

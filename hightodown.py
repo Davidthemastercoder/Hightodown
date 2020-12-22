@@ -300,6 +300,18 @@ while allowed == True:
    else:
      print("Invalid cant continue")
      break
+ if s[i]=="only_counter_lower\n" or s[i]=="only_counter_lower;\n":
+   if counter < int(s[i+1]):
+     i=i+2
+   else:
+     print("Invalid cant continue")
+     break
+ if s[i]=="only_counter_higher\n" or s[i]=="only_counter_higher;\n":
+   if counter > int(s[i+1]):
+     i=i+2
+   else:
+     print("Invalid cant continue")
+     break
    
 
  
