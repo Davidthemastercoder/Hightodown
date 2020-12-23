@@ -1,35 +1,4 @@
-def main():
-  import datetime
-  data = open("Test.htd","r")
-
-
-  variables={}
-
-  s = data.readlines()
-
-
-
-
-
-  if s[0] == "declare\n":
-    print("variable declaration started")
-    variables ={s[1]:s[2]}
-    #print (s[1].strip())
-    #print(s[2].strip())
-  
-
-  
-  if s[4]== "print\n" :
-    print(variables.values())
-
-  if s[7] == "show_time":
-    print(datetime.datetime.now)
-
-
-
-
-  
-##########################################
+import sys
 import datetime
 import os
 import time
@@ -52,7 +21,16 @@ allowed = True
 i=0
 variables = {}
 counter = 0
-data = open("Test.htd","r")
+#if len(sys.argv[0]) < 1:
+try:
+  data=open(sys.argv[1] ,"r")
+except:
+  
+
+  data=open("Test.htd","r")
+  
+#else:
+
 s  = data.readlines()
 import webbrowser
 while allowed == True:
@@ -313,7 +291,7 @@ while allowed == True:
      print("Invalid cant continue")
      break
    
-
+data.close()
  
      
 
