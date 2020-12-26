@@ -290,6 +290,10 @@ while allowed == True:
    else:
      print("Invalid cant continue")
      break
+ if s[i]=="print_counter\n" or s[i]=="print_counter;\n":
+   print(counter)
+   i=i+1
+   
    
 data.close()
  

@@ -65,3 +65,4 @@ decrease_counter X
 only_counter_is X
 only_counter_lower X
 only_counter_higher X
+print_counter X
