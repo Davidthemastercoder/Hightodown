@@ -1,0 +1,151 @@
+ Hightodown
+Hightodown ist keine richtige Programmiersprache, sondern stellt lediglich nützliche Funktionen zur Verfügung, die im Alltag eines IT Admins sehr oft gebraucht werden, wie zum Beispiel Hashes generieren, um ein Passwort zu ersetzen. HTD(hightodown) wurde nach seiner Syntax der Trennung von jedem Ausdruck mit einer neuen Zeile benannt. Es wurde ein Auge auf nützliche Funktionen gelegt und sollte HTD selbst nicht ausreichen ist es auch möglich Python Code auszuführen. HTD ist auf keinen Fall ausgereift Sie ist auch nicht perfekt stabil und es sollte abgewogen werden ob der Einsatz von HTD in Produktiver Umgebung wirklich notwendig ist. Im Moment steht eine Windows Binary und 2 Linux Binaries zur Verfügung eine Für ARM und eine für X86 diese beiden sind jedoch eventuell sehr instabil und werden wahrscheinlich nicht von mir weiterentwickelt Es kann auch sein, dass nicht alles genau so funktioniert wie bei der Windows Binarie. HTD besitzt weder if Statements noch schleifen jedoch andere Kotrollstrukturen, die in dieser Doku genauer beleuchtet werden. Es kann sein, dass der Virenschutz bei dem HTD Interpreter Alarm schlägt das kann daran liegen dass die Exe nicht signiert ist. Das Skript muss im gleichen Verzeichnis liegen und muss immer Test.htd heißen (Nicht mehr da man jetzt mithelfe der Parameter die man angeben kann wenn man die exe per Commandline startet auch eine andere Datei nehmen kann). Sämtliche Werte werden Jeweils in einer neuen Zeile angegeben OHNE SPACE ODER SONSTIGE FORMATIERUNG. Hightodown ist sehr casesensitive KEINE EINRÜCKUNGEN. Die Befehle können auch jeweils mit einem Semikolon direkt hinter dem Befehl geschrieben werden. KEINE LEERZEILEN.
+
+
+Beispiel Hello World
+print
+Hello World
+end
+
+
+
+
+Zur Syntax ANS ENDE MUSS IMMER DER BEFEHL „end“
+print
+gibt die Zeichenkette in der nächsten Zeile aus.
+show_time
+Zeigt aktuelle Uhrzeit
+Befehl:
+declare
+BITTE NICHT VERWENDEN SCHLECHT PROGRAMMIERT
+input
+Unnötig holt nur einen Input und macht dann nichts damit
+end   
+Muss immer ans Ende der Test.htd
+show_input
+Zeigt einen Input an
+system_call
+führt den in der nächsten Zeile angegebenen CMD Befehl aus
+sleep 
+pausiert für die angegebene Zeit in der nächsten Zeile 
+msg_box
+zeigt eine Messagebox mit dem Inhalt, der in der nächsten Zeile steht.
+random
+generiert eine Zufallszahl in dem Bereich der Zahlen in den Nächsten 2 Zeilen
+show_os
+zeigt das Betriebssystem an
+openwebsite
+öffnet die in der nächsten Zeile angegeben URL im Browser
+show_line
+zeigt die aktuelle Zeile an (Beginnt bei 0)
+restart
+restartet die Test.htd
+only_input
+Öffnet eine Eingabe und nur wenn diese Eingabe dem Text in der nächsten Zeile entspricht wird das Skript weiter ausgeführt.
+make_file
+erstellt eine Datei mit dem Namen, der in der nächsten Zeile angegeben wird
+only_file
+Ähnlich wie only_input Code wird nur ausgeführt, wenn die in der nächsten Zeile Angegebene Datei existiert.
+list_files
+listet alle Dateien im Verzeichnis auf
+write_tofile
+Schreibt den in der nächsten Zeile angegebenen Text in eine Datei. Es wird in die erste Zeile der Datei geschrieben
+py_launch
+Führt eine Python Datei aus, die in der Nächsten Zeile angegeben wird. (Eventuell Probleme bei Imports)
+only_if_line_file
+Code wird nur ausgeführt, wenn die Zeile in der Angegebenen Datei, der in der nächsten Zeile entspricht (Erste Zeile)
+goto
+geht an die in der nächsten Zeile angegebenen Position in der Test.htd
+del_file
+löscht die in der nächsten Zeile angegebenen Datei.
+get_cwd
+gibt die Aktuelle Working Directory aus 
+make_dir
+erstellt das in der nächsten Zeile angegebene Verzeichnis.
+math_pi
+gibt PI und ein Paar Nachkommastellen der Zahl aus.
+math_pow
+Gibt aus: potenziert die in der nächsten Zeile angegebene Zahl hoch der in der übernächsten
+ math_sqrt
+gibt die Wurzel der in der nächsten Zeile angegebenen Zahl aus
+ calc_multi
+
+Multipliziert die in der nächsten Zeile angegebene Zahl mit der in der übernächsten Zeile.
+calc_minus
+Nimmt die in der nächsten Zeile angegebene Zahl und zieht sie Von der Zahl ab, die in der übernächsten Zeile steht.
+calc_plus
+Nimmt die Zahl in der nächsten Zeile und addiert sie auf die Zahl in der übernächsten Zeile
+calc_divide
+Teilt die in der nächsten Zeile angegebene Zahl durch die Zahl die in der übernächsten Zeile steht.
+get_host_name
+Gibt den Hostname des PCs aus.
+computer_voice
+Eine Computerstimme spricht den in der nächsten Zeile angegebenen Text aus.
+call_exe
+Ruft die in der nächsten Zeile angegebene Exe auf.
+#
+Kommentar
+//
+Kommentar
+to_bin
+Konvertiert die in der nächsten Zeile angegeben Dezimahlzahl in die entsprechende Dualzahl
+to_hex
+Konvertiert die in der nächsten Zeile angegebene Dezimalzahl in die entsprechende Hexadezimahlzahl 
+to_oct
+konvertiert die in der nächsten Zeile angegeben Dezimalzahl in die entsprechende Oktalzahl
+hash_md5
+Gibt den MD-5 Hash der in der nächsten Zeile angegebenen Zeichenkette aus.
+hash_sha256
+Gibt den SHA256 Hash der in der nächsten Zeile angegebenen Zeichenkette aus.
+show_battery_percent
+zeigt den Aktuellen Akkustand an
+win_notify
+Zeigt eine Windows Benachrichtigung an. Der Titel entspricht dem Text in der nächsten Zeile und der Inhalt entspricht dem Text in der übernächsten Zeile
+make_screenshot
+Erstellt einen Screenshot und speichert ihn in der in der nächsten Zeile angegebenen Datei
+set_alias
+Weißt dem Alias dem in der nächsten Zeile angegebenen Wert zu
+print_alias
+Gibt den alias aus
+input_in_alias
+Speichert eine Benutzereingabe in den alias
+openwebsite_alias
+Öffnet die im alias gespeicherten Wert im Browser also wenn im Alias www.google.com steht wird der google.com aufgerufen
+notify_alias
+Gibt eine Windows Benachrichtigung mit dem Alias als Inhalt als
+only_input_alias
+Code wird nur weiter ausgeführt wenn der Input der von dem User erfragt wird dem Alias entspricht
+computer_voice_alias
+Eine computerstimme Stimme gibt das aus was im Alias ist 
+clear_alias
+löscht den Inhalt des Alias wieder
+only_alias_num
+Code wird nur weiter ausgeführt wenn der im Alias gespeicherte Werte numerisch ist
+sleep_alias
+pausiert für die im Alias angegeben Zeit
+only_alias
+Code wird nur weiter ausgeführt wenn der Wert im Alias dem in der nächsten Zeile entspricht
+random_in_alias
+Generiert eine Pseudozufallszahl die zwischen den in den nächsten beiden Zeilen angegebenen Werten und speichert sie dann im Alias
+only_alias_else_jump
+code wird nur weiter ausgeführt wenn der Alias dem entspricht was in der nächsten Zeile angegeben ist. Ansonsten wird in die Zeile gesprungen die in der übernächsten angegeben wird
+only_alias_endswith
+Code wird nur weiter ausgeführt wenn der Alias mit dem in der nächsten Zeile angegebenen Zeichen endet
+hash_md5_alias
+generiert einen MD5 Hash aus dem Was im Alias gespeichert ist und gibt diesen dann aus
+ hash_sha256_alias
+generiert einen sha256 Hash aus dem alias und gibt diesen Aus
+set_counter
+setzt den counter auf den Wert der in der nächsten Zeile angegeben ist
+increase_counter
+erhöht den counter um den in der nächsten Zeile angegebenen Wert.
+decrease_counter
+verringert den counter um den in der nächsten Zeile angegebenen Wert
+only_counter_is
+Code wird nur weiter ausgeführt wenn der counter dem in der nächsten Zeile angegebenen Wert entspricht
+only_counter_lower
+Code wird nur weiter ausgeführt wenn der counter niedriger als der in der nächsten Zeile angegebene Wert ist.
+only_counter_higher
+Code wird nur weiter ausgeführt wenn der counter größer als der in der nächsten Zeile angegebene Wert ist
+print_counter
+gibt den Wert des counters aus 
